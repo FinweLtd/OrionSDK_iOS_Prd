@@ -114,6 +114,6 @@ Show 360° image (UIImage)
 
 Note that **Orion1View** inherits **UIView** and therefore inherits also properties and methods provided by UIView (e.g. setting the frame).
 
-![Alt text](images/seq3.png "Sequence diagram:Orion1View")
+![Alt text](images/seq1.png "Sequence diagram:Orion1View")
 
 
