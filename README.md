@@ -103,6 +103,10 @@ Play 360° video from given NSURL(local or remote) with previewimage(optional)
 ```
 **Orion1View** delegate method **orion1ViewReadyToPlayVideo:** is called when the requested video is ready to be played. Note that video starts playing only after **play:** method has been called (e.g. **[orion1View play:0.0]** starts playing the requested video from the beginning). **Orion1View** also provides methods **pause**, **play**,  **seekTo:** and **isPaused**.
 
+![Alt text](images/seq1.png "Sequence diagram:Orion1View")
+
+
+
 Show 360° image from given NSURL(local or remote)
 ```
 [orion1View initImageWithUrl:imageUrl licenseFileUrl:licenseURL];
@@ -113,7 +117,5 @@ Show 360° image (UIImage)
 ```
 
 Note that **Orion1View** inherits **UIView** and therefore inherits also properties and methods provided by UIView (e.g. setting the frame).
-
-![Alt text](images/seq1.png "Sequence diagram:Orion1View")
 
 
