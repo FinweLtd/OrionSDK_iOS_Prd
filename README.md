@@ -118,4 +118,9 @@ Show 360° image (UIImage)
 
 Note that **Orion1View** inherits **UIView** and therefore inherits also properties and methods provided by UIView (e.g. setting the frame).
 
+Next Steps
+-------------
 
+It is recommended to get familiar with the [wiki](https://github.com/FinweLtd/OrionSDK_iOS_Prd/wiki) pages and API documentation that is included in the SDK to learn more about the available features and how they should be used.
+
+To jump start your project, take a look at the delivered sample apps. Import the project to your workspace, build and run it on your device. Then look at the source code.
