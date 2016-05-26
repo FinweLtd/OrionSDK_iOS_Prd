@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name = 'OrionSDK'
-  s.version = '1.0.1'
+  s.version = '1.1.0'
   s.license      = {
     :type => 'Copyright',
     :text => <<-LICENSE
-      Copyright 2015 Finwe Ltd, Inc. All rights reserved.
+      Copyright 2016 Finwe Ltd, Inc. All rights reserved.
       LICENSE
   }
   s.summary = 'OrionSDK_iOS containing components for panorama video'

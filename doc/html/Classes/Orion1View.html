@@ -84,6 +84,8 @@
 	
 	<optgroup label="Instance Methods">
 		
+		<option value="//api/name/createTag:">- createTag:</option>
+		
 		<option value="//api/name/initImageWithUIImage:licenseFileUrl:">- initImageWithUIImage:licenseFileUrl:</option>
 		
 		<option value="//api/name/initImageWithUrl:licenseFileUrl:">- initImageWithUrl:licenseFileUrl:</option>
@@ -98,7 +100,17 @@
 		
 		<option value="//api/name/play:">- play:</option>
 		
+		<option value="//api/name/removeTag:">- removeTag:</option>
+		
 		<option value="//api/name/seekTo:">- seekTo:</option>
+		
+		<option value="//api/name/setTagAlpha:alpha:">- setTagAlpha:alpha:</option>
+		
+		<option value="//api/name/setTagAssetURL:tagAssetURL:">- setTagAssetURL:tagAssetURL:</option>
+		
+		<option value="//api/name/setTagLocation:yawAngle:pitchAngle:">- setTagLocation:yawAngle:pitchAngle:</option>
+		
+		<option value="//api/name/setTagScale:scale:">- setTagScale:scale:</option>
 		
 		<option value="//api/name/takeSnapshot:">- takeSnapshot:</option>
 		
@@ -1035,6 +1047,349 @@ in 360 video view. Default NO.</p>
 			
 		</div>
 	</div>
+</div><div class="section-method">
+	<a name="//api/name/createTag:" title="createTag:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/createTag:">&ndash;&nbsp;createTag:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates tag with given tag index, Orion 360 content must be initialized before calling createTag</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)createTag:(NSUInteger)<em>tagIndex</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tagIndex</code></th>
+						<td><p>Index number(>0) of tag, duplicates will be replaced</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Orion1View.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeTag:" title="removeTag:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeTag:">&ndash;&nbsp;removeTag:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes tag with given tag index.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeTag:(NSUInteger)<em>tagIndex</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tagIndex</code></th>
+						<td><p>Index number of tag</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Orion1View.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setTagAssetURL:tagAssetURL:" title="setTagAssetURL:tagAssetURL:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setTagAssetURL:tagAssetURL:">&ndash;&nbsp;setTagAssetURL:tagAssetURL:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set image asset url to existing tag</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setTagAssetURL:(NSUInteger)<em>tagIndex</em> tagAssetURL:(NSURL *)<em>tagAssetURL</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tagIndex</code></th>
+						<td><p>Index number of tag</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tagAssetURL</code></th>
+						<td><p>Url to image asset</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Orion1View.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setTagLocation:yawAngle:pitchAngle:" title="setTagLocation:yawAngle:pitchAngle:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setTagLocation:yawAngle:pitchAngle:">&ndash;&nbsp;setTagLocation:yawAngle:pitchAngle:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set/change tag location to existing tag</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setTagLocation:(NSUInteger)<em>tagIndex</em> yawAngle:(CGFloat)<em>yawAngle</em> pitchAngle:(CGFloat)<em>pitchAngle</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tagIndex</code></th>
+						<td><p>Index number of tag</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>yawAngle</code></th>
+						<td><p>rotation around y-axis in degrees: -180(left), 0(center), +180(right)</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pitchAngle</code></th>
+						<td><p>rotation around x-axis in degrees: +90(top), 0(center), -90(bottom)</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Orion1View.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setTagScale:scale:" title="setTagScale:scale:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setTagScale:scale:">&ndash;&nbsp;setTagScale:scale:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set/change tag scale, default value 1.0</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setTagScale:(NSUInteger)<em>tagIndex</em> scale:(CGFloat)<em>scale</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tagIndex</code></th>
+						<td><p>Index number of tag</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>scale</code></th>
+						<td><p>scale factor</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Orion1View.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setTagAlpha:alpha:" title="setTagAlpha:alpha:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setTagAlpha:alpha:">&ndash;&nbsp;setTagAlpha:alpha:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Set/change tag alpha, default value 1.0</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setTagAlpha:(NSUInteger)<em>tagIndex</em> alpha:(CGFloat)<em>alpha</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>tagIndex</code></th>
+						<td><p>Index number of tag</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>alpha</code></th>
+						<td><p>tag alpha</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">Orion1View.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
 </div>
 						</div>
 						
@@ -1050,7 +1405,7 @@ in 360 video view. Default NO.</p>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 Finwe Ltd. All rights reserved. Updated: 2015-06-18</p>
+						<p class="copyright">Copyright &copy; 2016 Finwe Ltd. All rights reserved. Updated: 2016-05-10</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ @enum TagVRControlState
+ Tag VR Control state
+ */
+typedef NS_ENUM(NSUInteger, TagVRControlState) {
+    /** When UI should hide viewfinder */
+    VR_CONTROL_STATE_TAG_OFF = 0,
+    /** When UI should show viewfinder */
+    VR_CONTROL_STATE_TAG_INITIALIZED,
+    /** When selecting progress starts for tag */
+    VR_CONTROL_STATE_TAG_SELECTING,
+    /** When selecting progress changes to unsecting for tag */
+    VR_CONTROL_STATE_TAG_UNSELECTING,
+    /** When tag selected */
+    VR_CONTROL_STATE_TAG_SELECTED,
+};
 
 @protocol Orion1ViewDelegate;
 
@@ -38,7 +54,7 @@
 @property (nonatomic) BOOL vrModeEnabled;
 
 /**
- *  Device orientation portrait. Affects screen dividing in VR mode. 
+ *  Device orientation portrait. Affects screen dividing in VR mode.
  *  If YES -> screen is divided to top and botton halves, else (NO, default) -> to left and right halves.
  */
 @property (nonatomic) BOOL uiInterfaceOrientationPortrait;
@@ -135,6 +151,54 @@
  */
 -(UIImage*)takeSnapshot:(NSInteger)flashStrength;
 
+/**
+ *  Creates tag with given tag index, Orion 360 content must be initialized before calling createTag
+ *
+ *  @param tagIndex Index number(>0) of tag, duplicates will be replaced
+ */
+-(void)createTag:(NSUInteger)tagIndex;
+
+/**
+ *  Removes tag with given tag index.
+ *
+ *  @param tagIndex Index number of tag
+ */
+-(void)removeTag:(NSUInteger)tagIndex;
+
+/**
+ *  Set image asset url to existing tag
+ *
+ *  @param tagIndex Index number of tag
+ *  @param tagAssetURL  Url to image asset
+ */
+-(void)setTagAssetURL:(NSUInteger)tagIndex tagAssetURL:(NSURL*)tagAssetURL;
+
+/**
+ *  Set/change tag location to existing tag
+ *
+ *  @param tagIndex Index number of tag
+ *  @param yawAngle     rotation around y-axis in degrees: -180(left), 0(center), +180(right)
+ *  @param pitchAngle   rotation around x-axis in degrees: +90(top), 0(center), -90(bottom)
+ */
+-(void)setTagLocation:(NSUInteger)tagIndex yawAngle:(CGFloat)yawAngle pitchAngle:(CGFloat)pitchAngle;
+
+/**
+ *  Set/change tag scale, default value 1.0
+ *
+ *  @param tagIndex Index number of tag
+ *  @param scale    scale factor
+ */
+-(void)setTagScale:(NSUInteger)tagIndex scale:(CGFloat)scale;
+
+
+/**
+ *  Set/change tag alpha, default value 1.0
+ *
+ *  @param tagIndex Index number of tag
+ *  @param alpha    tag alpha
+ */
+-(void)setTagAlpha:(NSUInteger)tagIndex alpha:(CGFloat)alpha;
+
 @end
 
 /**
@@ -169,11 +233,38 @@
 - (void)orion1ViewDidUpdateProgress:(Orion1View*)orion1View currentTime:(CGFloat)currentTime availableTime:(CGFloat)availableTime totalDuration:(CGFloat)totalDuration;
 
 /**
+ *  Tells the delegate that video progress values were updated.
+ *
+ *  @param orion1View    Orion1View
+ *  @param currentTime   Current progress time
+ *  @param totalDuration Total video duration
+ *  @param loadedTimeRanges This property provides a collection of time ranges for which the player has the media data readily available. The ranges provided might be discontinuous.
+ */
+- (void)orion1ViewDidUpdateProgress:(Orion1View*)orion1View currentTime:(CGFloat)currentTime totalDuration:(CGFloat)totalDuration loadedTimeRanges:(NSArray*)loadedTimeRanges;
+
+/**
  *  Tells the delegate that 360 video buffering status changed.
  *
  *  @param orion1View Orion1View
  *  @param buffering  New buffering status
  */
 - (void)orion1ViewDidChangeBufferingStatus:(Orion1View*)orion1View buffering:(BOOL)buffering;
+
+/**
+ *  Tells the delegate that user touched tag
+ *
+ *  @param orion1View   Orion1View
+ *  @param tagIndex     Index of touched tag
+ */
+- (void)orion1ViewTagDidSelect:(Orion1View*)orion1View tagIndex:(NSUInteger)tagIndex;
+
+/**
+ *  Tells the delegate status changes of tag selection in vrmode
+ *
+ *  @param orion1View   Orion1View
+ *  @param state        TagVRControlState
+ *  @param tagIndex     Index of current tag
+ */
+- (void)orion1ViewTagDidChangeVRControlState:(Orion1View*)orion1View state:(TagVRControlState)state tagIndex:(NSUInteger)tagIndex;
 
 @end
