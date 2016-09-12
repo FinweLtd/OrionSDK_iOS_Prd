@@ -13,7 +13,7 @@ The Orion SDK is a developer library to easily build and implement mobile applic
 What's new
 -------
 
-Build 1.1.0, May 26, 2016:
+Build 1.1.1, Sep 12, 2016:
 * Tag support added
 
 Overview
