@@ -1,6 +1,8 @@
 OrionSDK_iOS
 ==================
 
+> Before using the SDK, read [Licence Agreement](https://github.com/FinweLtd/OrionSDK_iOS_Prd/blob/master/Finwe_Orion360_SDK_Basic_Evaluation_Kit_License_en_US-20161212_1500.pdf)
+
 Introduction
 -------
 
