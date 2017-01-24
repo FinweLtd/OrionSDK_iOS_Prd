@@ -3,6 +3,8 @@ OrionSDK_iOS
 
 > Before using the SDK, read [Licence Agreement](https://github.com/FinweLtd/OrionSDK_iOS_Prd/blob/master/Finwe_Orion360_SDK_Basic_Evaluation_Kit_License_en_US-20161212_1500.pdf)
 
+Orion360 SDK is a commercial product and requires a license file to work. An evaluation license is provided with the sample app. You can get a watermarked evaluation license file also for your own package name by creating an account to https://store.make360app.com, starting a new SDK project, providing your own package name, and selecting FREE Trial.
+
 Introduction
 -------
 
