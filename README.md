@@ -81,7 +81,7 @@ Getting Started
 
 ##License File
 
-Orion360 SDK is a commercial product and requires a license file to work. An evaluation license is provided with the sample app. You can get a watermarked evaluation license file also for your own package name by creating an account to https://store.make360app.com, starting a new SDK project, providing your own package name, and selecting FREE Trial.
+Orion360 SDK is a commercial product and requires a license file to work. An evaluation license is provided with the sample app. You can get a watermarked evaluation license file also for your own bundle identifier by creating an account to https://store.make360app.com, starting a new SDK project, providing your own package name, and selecting FREE Trial.
 
 To show 360° content you need a **license** file that must be copied to your app project's resources without any modifications. Failure to do so will result to black video player screen.
 
