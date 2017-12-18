@@ -127,4 +127,4 @@ Next Steps
 
 It is recommended to get familiar with the [wiki](https://github.com/FinweLtd/OrionSDK_iOS_Prd/wiki) pages and API documentation that is included in the SDK to learn more about the available features and how they should be used.
 
-To jump start your project, take a look at the delivered sample apps. Import the project to your workspace, build and run it on your device. Then look at the source code.
+To jump start your project, take a look at the delivered sample apps: https://github.com/FinweLtd/Orion_SDK_iOS_SampleApps . Import the project to your workspace, build and run it on your device. Then look at the source code.
